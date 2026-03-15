@@ -6,17 +6,17 @@ import './Countries.css'
 const Countries = ({countriesPromise}) => {
     const countriesData = use(countriesPromise)
     const countries = countriesData.countries;
-    // console.log(countries);
+   
     const [visitedCountries, setVisitedCountries] = useState([])
      const [visitedFalgs, setVisitedFalgs] = useState([])
 
     const handleVisitedCountries = (country) => {
-//   /      console.log("HELLO", country);
+
         const newVisitedCountries = [...visitedCountries,  country]
         setVisitedCountries(newVisitedCountries)
     }
     const handleVisitedFlags = (flag) => {
-        // console.log("MY Name Is React", flag);
+      
         const newVisitedFlags = [...visitedFalgs, flag]
         setVisitedFalgs(newVisitedFlags)
 
@@ -35,7 +35,7 @@ const Countries = ({countriesPromise}) => {
   </ol>
   <div>
     {
-        visitedFalgs.map(flags => <img src={flags}></img> )
+        visitedFalgs.map((flags, index) => <img key={index} src={flags}></img> )
     }
   </div>
 
