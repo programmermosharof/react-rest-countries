@@ -7,3 +7,8 @@
 .countryVisited{
     background: #04541e7f;
 }
+
+.btn{
+    padding: 10px;
+    margin: 10px;
+}
